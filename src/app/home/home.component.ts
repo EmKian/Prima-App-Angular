@@ -15,7 +15,7 @@ import {HousingService} from "../housing.service";
     <section>
       <form>
         <input type="text" placeholder="Filter by city" #filter>
-        <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
+        <button class="primary" type="button" (click)="filterResults(filter.value.trim())">Search</button>
       </form>
     </section>
     <section class="results">

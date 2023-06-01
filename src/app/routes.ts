@@ -1,6 +1,7 @@
 import {Route, Routes} from "@angular/router";
 import {HomeComponent} from "./home/home.component";
 import {DetailsComponent} from "./details/details.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 
 const routeConfig: Routes = [
   {
@@ -12,6 +13,11 @@ const routeConfig: Routes = [
     path: 'details/:id',
     component: DetailsComponent,
     title: 'Home details'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+    title: 'Error 404'
   }
 ];
 
